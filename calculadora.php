@@ -1,5 +1,4 @@
 <?php
-
  $Value = "10";
  $Value2 = "30";
  $Operador = "-";
