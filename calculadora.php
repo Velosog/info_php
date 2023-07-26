@@ -1,29 +1,26 @@
 <?php
- $Value = "10";
- $Value2 = "30";
- $Operador = "-";
+ $Value = "2";
+ $Value2 = "4";
+ $Operador = "%";
  $Resultado = 0;
  $NúmeroAlto = 40;
 
   if ($Operador == "+" ) {
     $Resultado = $Value + $Value2;
   }
-// O valor é 40
 
   if ($Operador == "-") {
     $Resultado = $Value - $Value2;
   }
-// O valor é -20
 
   if ($Operador == "/") {
     $Resultado = $Value / $Value2;
   }
-// O valor é 0.33333
 
   if ($Operador == "*") {
     $Resultado = $Value * $Value2;
   }
-// O valor é 300
+
   if ($Resultado >= $NúmeroAlto ) {
     echo "É um número alto <br> ";
   }
@@ -31,4 +28,18 @@
     echo "Não é um número alto <br>";
   }
 
-  echo $Resultado;
+  if ($Operador == "**") {
+     $Resultado = $Value ** $Value2;
+  }
+
+  if ($Operador == "%") {
+    $resto = $Value % $Value2;
+    if ($resto == 0){
+      $Resultado = "O número é par";  
+    }  else {
+      $Resultado = "O número é par";
+    }
+  }
+ 
+  echo "O valor é {$Resultado}";
+ 
