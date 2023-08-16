@@ -140,9 +140,29 @@
    $MP = $numerador / $denominador;
 
    if ($MP >= 1.4){
-    echo "O aluno Foi Aprovado, pois sua média foi: {$MP} <br>";
+    // echo "O aluno Foi Aprovado, pois sua média foi: {$MP} <br>";
    }
     else {
-      echo "O aluno foi Reprovado, pois sua média foi: {$MP} <br>";
+    //  echo "O aluno foi Reprovado, pois sua média foi: {$MP} <br>";
     }
 
+// Média harmônica
+ 
+    $Numerador= 5;
+
+    $Denominador= 1/2;
+    $Denominador1= 1/3;
+    $Denominador2= 1/5;
+    $Denominador3= 1/6;
+    $Denominador4= 1/9;
+
+    $totalDenominador= (($Denominador + $Denominador1 + $Denominador2 + $Denominador3 + $Denominador4) );
+    $divisão= $Numerador / $totalDenominador;
+
+    echo "A sua Média Harmônica é: {$divisão} <br>";
+
+  // Para quem for usar o código, alterar o valor da divisão dos "Denominadores" e o valor da variável "Numerador"
+
+
+
+  
