@@ -11,7 +11,12 @@ $dataInicial = '22/08/2023';
 $dataFinal = '23/08/2023';
 $acrescimo = '03:00';
 $acrescimo2 = '04:00';
+$day = 86400; // segundos
 
+
+
+// $day - $horanical = falta
+// $falta + $dia final
 
 $arrAcrescimo = explode(":",$acrescimo);
 $minutosA = $arrAcrescimo[0];
@@ -42,12 +47,12 @@ $minutosEmSegundos = $minutos * 60;
 $arrDias = explode("/",$dataInicial);
 $year = $arrDias[2];
 $month = $arrDias[1];
-$day = $arrDias[0];
+$days = $arrDias[0];
 
 $yearEmDias = $year * 365;
 $monthEmDias = $month * 30;
 
-$totalInicialEmDias = $yearEmDias + $monthEmDias + $day;
+$totalInicialEmDias = $yearEmDias + $monthEmDias + $days;
 
 $arrDiasf = explode("/",$dataFinal);
 $yearf = $arrDiasf[2];
@@ -69,7 +74,11 @@ $minutosEmSegundosF = $minutosFinais * 60;
 
 $totalInicialEmSegundosF = $horaEmSegundosF + $minutosEmSegundosF + $segundosFinais;
 
+$falta = $day - $totalInicialEmSegundos;
+$tempodejogo = $falta + $totalInicialEmSegundosF;
+
 $Resultado = ($totalInicialEmSegundosF - $totalInicialEmSegundos + $totalAcrescimoEmSegundos + $totalAcrescimoEmSegundos2) /60;
 $TempoemDias = $totalInicialEmDiasf -$totalInicialEmDias;
 
-echo "O jogo durou {$TempoemDias} dia, possuindo a duração de {$Resultado} minutos <br>";
+
+echo "O jogo durou {$TempoemDias} dia, possuindo a duração de {$tempodejogo} minutos <br>";
