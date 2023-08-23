@@ -7,8 +7,11 @@
 
 $horaInicial = '23:00:00';
 $horaFinal = '00:30:00';
+$dataInicial = '22/08/2023';
+$dataFinal = '23/08/2023';
 $acrescimo = '03:00';
 $acrescimo2 = '04:00';
+
 
 $arrAcrescimo = explode(":",$acrescimo);
 $minutosA = $arrAcrescimo[0];
@@ -26,6 +29,8 @@ $minutosEmSegundosA2 = $minutosA2 * 60;
 
 $totalAcrescimoEmSegundos2 = $minutosEmSegundosA2 + $segundosA2;
 
+$totalInicialEmSegundos = $horaEmSegundos + $minutosEmSegundos + $segundos;
+
 $arrHora = explode(":",$horaInicial);
 $hora = $arrHora[0];
 $minutos = $arrHora[1];
@@ -34,7 +39,25 @@ $segundos = $arrHora[2];
 $horaEmSegundos = $hora * 3600;
 $minutosEmSegundos = $minutos * 60; 
 
-$totalInicialEmSegundos = $horaEmSegundos + $minutosEmSegundos + $segundos;
+$arrDias = explode("/",$dataInicial);
+$year = $arrDias[2];
+$month = $arrDias[1];
+$day = $arrDias[0];
+
+$yearEmDias = $year * 365;
+$monthEmDias = $month * 30;
+
+$totalInicialEmDias = $yearEmDias + $monthEmDias + $day;
+
+$arrDiasf = explode("/",$dataFinal);
+$yearf = $arrDiasf[2];
+$monthf = $arrDiasf[1];
+$dayf = $arrDiasf[0];
+
+$yearEmDiasf = $yearf * 365;
+$monthEmDiasf = $monthf * 30;
+
+$totalInicialEmDiasf = $yearEmDiasf + $monthEmDiasf + $dayf;
 
 $arrHoraFinal = explode(":",$horaFinal);
 $horasFinais  = $arrHoraFinal[0];
@@ -47,5 +70,6 @@ $minutosEmSegundosF = $minutosFinais * 60;
 $totalInicialEmSegundosF = $horaEmSegundosF + $minutosEmSegundosF + $segundosFinais;
 
 $Resultado = ($totalInicialEmSegundosF - $totalInicialEmSegundos + $totalAcrescimoEmSegundos + $totalAcrescimoEmSegundos2) /60;
+$TempoemDias = $totalInicialEmDiasf -$totalInicialEmDias;
 
-echo "O tempo de jogo foi de {$Resultado} minutos <br>";
+echo "O jogo durou {$TempoemDias} dia, possuindo a duração de {$Resultado} minutos <br>";
