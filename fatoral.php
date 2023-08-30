@@ -4,17 +4,12 @@
 
 
 // O fatorial de um número é a multiplicação desse número por todos os seus antecessores maiores que zero
-$n = 5;
+$n = 4;
 $n2 = 1;
 
-//$n = $n* ($n -1) * ($n -2);
-   
-for ($n = 5; $n > 0; $n--){
-    if ($n > 0){
-        echo $n * ($n - 1);
-    } else echo "$n";
-
-    echo "$n! = $n * ($n - $n2) <br>";
+while ($n >= 1){
+    $n2 *= $n;
+    $n--; 
 }
-
-echo "O fatorial do teu número é: {$n} <br>";
+   
+echo "O fatorial do teu número é: {$n2} <br>";
