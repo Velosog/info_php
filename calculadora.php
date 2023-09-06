@@ -1,21 +1,52 @@
 <?php
- $Value = "10";
- $Value2 = "16";
+ // $value1 = 10;
+ // $value2 = 16;
  $Operador = "ma";
- $Resultado = 0;
  $NúmeroAlto = 40;
 
-  if ($Operador == "+") {
-    $Resultado = $Value + $Value2;
-  }
+ function soma ($value1, $value2){
+  return $value1 + $value2;
+ }
+ function subtracao ($value1, $value2){
+    return $value1 - $value2;
+ }
 
-  if ($Operador == "-") {
-    $Resultado = $Value - $Value2;
-  }
+ function multiplicacao ($value1, $value2){
+    return $value1 * $value2;
+ }
+ 
+ function divisao ($value1, $value2){
+    return $value1 / $value2;
+ }
+ 
+ function exibirResultado ($resultado){
+  echo $resultado . "<br>";
+ }
 
-  if ($Operador == "/") {
-    $Resultado = $Value / $Value2;
+ function calcular($operador, $value1, $value2){
+  if ($operador == '+'){
+    return soma ($value1, $value2);
   }
+  if ($operador == '-'){
+    return subtracao ($value1, $value2);
+  }
+  if ($operador == '*'){
+    return multiplicacao ($value1, $value2);
+  }
+  if ($operador == '/'){
+    return divisao ($value1, $value2);
+  }
+ }
+
+$operador= "+";
+$value1 = 10;
+$value2 = 10;
+
+$resultado = calcular($operador, $value1, $value2);
+exibirResultado ($resultado);
+
+
+return; 
 
   if ($Operador == "*") {
     $Resultado = $Value * $Value2;
@@ -159,7 +190,7 @@
     $totalDenominador= (($Denominador + $Denominador1 + $Denominador2 + $Denominador3 + $Denominador4) );
     $divisão= $Numerador / $totalDenominador;
 
-    echo "A sua Média Harmônica é: {$divisão} <br>";
+    //echo "A sua Média Harmônica é: {$divisão} <br>";
 
   // Para quem for usar o código, alterar o valor da divisão dos "Denominadores" e o valor da variável "Numerador"
 
