@@ -52,7 +52,21 @@ else{
     echo "$dataStr não é bissexto";
 }
 
+if ($mes == 2 && $dia >= 28){
+    $dia = 28;
 
+    if (isBissexto($ano)){
+        $dia 29;
+    }
+}
+
+    function 
+     if (($ano % 4 == 0) && ($ano % 100 != 0 || $ano %400 == 0)){
+        return true
+    } 
+    else {
+        return false
+    }
 
 
 
