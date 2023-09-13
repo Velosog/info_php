@@ -43,7 +43,14 @@ if (in_array($mes, $meses30dias) && $dia >30 ) {
     $mes -= 1;
 }
 
+ $dataStr = "{$dia}/{$mes}/{$ano}";
 
+if (($ano % 4 == 0) && ($ano % 100 != 0 || $ano %400 == 0)) {
+    echo "$dataStr é bissexto";
+}
+else{
+    echo "$dataStr não é bissexto";
+}
 
 
 
