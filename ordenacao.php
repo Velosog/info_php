@@ -23,14 +23,43 @@ echo $maior;
    Dica: utilize o laço de repetição FOR, pode ser necessário mais e um e tambem deve ser utilizadop um IF
 */
 
-$nums = [34, 12, 98, 45, 23, 67, 8];
-$tamanho = count($numeros);
+// $nums = [34, 12, 98, 45, 23, 67, 8];
+// $tamanho = count($numeros);
 
-for($i=0; $i < $tamanho; $i++){
-    $posicaoAtual = $nums[$i];
+// for($i=0; $i < $tamanho - 1; $i++){
+//     for ($j = 0; $j < $tamanhoArray - $i - 1 ; $j++) {
+//              if ($nums[$j] > $nums[$j +1]) {
+//             $temp = $nums[$j];
+//             $nums[$j] = $nums[$j +1];
+//             $nums[$j + 1] = $temp;
+//         }
+//     }
+// }
 
-    if ($posicaoAtual > $maior) {
-        $maior = $posicaoAtual;
-    }
+// class POO = objeto POO => Programação Orientada ao Objeto OOP
+// for | While \ Foreach | implode
+
+// implode transforma arary em string
+
+$frutas = [
+    "maçã",
+    "banana",
+    "laranja",
+    "banana",
+    "uva",
+    "maçã",
+    "maçã",
+];
+
+ // Saída esperada: maçã, banana, laranja, uva
+$newFrutas = [];
+
+for ($i=0; $i < count($frutas); $i++){
+    if (!in_array($frutas[$i], $newFrutas)){
+        array_push($newFrutas, $frutas[$i]);
+    } else 
+    {$newFrutas[$frutas] += 1; }
 }
-echo $maior;
+
+echo implode (",", $newFrutas);
+
