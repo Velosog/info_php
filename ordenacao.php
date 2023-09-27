@@ -55,10 +55,12 @@ $frutas = [
 $newFrutas = [];
 
 for ($i=0; $i < count($frutas); $i++){
-    if (!in_array($frutas[$i], $newFrutas)){
-        array_push($newFrutas, $frutas[$i]);
-    } else 
-    {$newFrutas[$frutas] += 1; }
+    if (!isset($newFrutas[$Frutas])){
+        $newFrutas[$frutas] = 1;
+    }
+    else {
+        $newFrutas[$frutas] += 1; 
+    }
 }
 
 echo implode (",", $newFrutas);
