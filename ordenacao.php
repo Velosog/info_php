@@ -3,19 +3,19 @@
 // E exibir esse valor ao final para o usuário.
 // Implementar a lógica para encontrar o 99;
 
-$numeros = [10, 80, 5, 14, 90, 29, 99, 1]; // 0 - 7 (8)
+// $numeros = [10, 80, 5, 14, 90, 29, 99, 1]; // 0 - 7 (8)
 
-$tamanho = count($numeros);
-$maior = 0;
+// $tamanho = count($numeros);
+// $maior = 0;
 
-for($i=0; $i < $tamanho; $i++){
-    $posicaoAtual = $nums[$i];
+// for($i=0; $i < $tamanho; $i++){
+//     $posicaoAtual = $nums[$i];
 
-    if ($posicaoAtual > $maior) {
-        $maior = $posicaoAtual;
-    }
-}
-echo $maior;
+//     if ($posicaoAtual > $maior) {
+//         $maior = $posicaoAtual;
+//     }
+// }
+// echo $maior;
 
 /* 
 2- Por meiod a tecnica de ordenação Bubble Sort, odene o array abaixo em ordem crescente. 
@@ -41,6 +41,7 @@ echo $maior;
 
 // implode transforma arary em string
 
+// CONTAR valores duplicados de um array.
 $frutas = [
     "maçã",
     "banana",
@@ -50,18 +51,44 @@ $frutas = [
     "maçã",
     "maçã",
 ];
+ // Saida esperada: 3maçã, 2banana, 1laranja, 1uva
+// Dica: in_array(), array_merge(), isset(), array_push()
 
- // Saída esperada: maçã, banana, laranja, uva
 $newFrutas = [];
+for($i = 0; $i < count($frutas); $i++) {
+    $frutaAtual = $frutas[$i]; // maca
 
-for ($i=0; $i < count($frutas); $i++){
-    if (!isset($newFrutas[$Frutas])){
-        $newFrutas[$frutas] = 1;
-    }
-    else {
-        $newFrutas[$frutas] += 1; 
+    if (!isset($newFrutas[$frutaAtual])) {
+        $newFrutas[$frutaAtual] = 1; // [maca => 1]
+    } else {
+        $newFrutas[$frutaAtual] += 1; // [maca => 3]
     }
 }
 
-echo implode (",", $newFrutas);
+$fruits = $newFrutas;
+function ordenacao($fruits, $ordem = "desc") {
+    
+    rsort($fruits);
+
+    foreach ($fruits as $i => $v) {
+        echo "$i = $v <br>";
+    }
+}
+
+ordenacao($fruits, $ordem = "desc");
+
+
+//  // Saída esperada: maçã, banana, laranja, uva
+// $newFrutas = [];
+
+// for ($i=0; $i < count($frutas); $i++){
+//     if (!isset($newFrutas[$Frutas])){
+//         $newFrutas[$frutas] = 1;
+//     }
+//     else {
+//         $newFrutas[$frutas] += 1; 
+//     }
+// }
+
+// echo implode (",", $newFrutas);
 
