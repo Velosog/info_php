@@ -56,6 +56,15 @@ $telefone = "54996110230";
     public $telefone;
 
         //   public function _construct($nome, $idade, $sexo, $nomePai, $nomeMae, $estadoCivil, $profissao, $escolaridade, $telefone);  
+                    // $this->nome = $nome;
+                    // $this->idade = $idade;
+                    // $this->sexo = $sexo;
+                    // $this->nomePai = $nomePai;
+                    // $this->nomeMae = $nomeMae;
+                    // $this->estadoCivil = $estadoCivil;
+                    // $this->profissao = $profissao;
+                    // $this->escolaridade = $escolaridade;
+                    // $this->telefone = $telefone;
 
         public function andar($pernas, $pes){
             echo "A pessoa tá andando {$pernas} {$pes} <br> ";
@@ -67,15 +76,6 @@ $telefone = "54996110230";
             echo "A pessoa está falando {$boca} {$voz} <br> ";
         }
 
-        // $this->nome = $nome;
-        // $this->idade = $idade;
-        // $this->sexo = $sexo;
-        // $this->nomePai = $nomePai;
-        // $this->nomeMae = $nomeMae;
-        // $this->estadoCivil = $estadoCivil;
-        // $this->profissao = $profissão;
-        // $this->escolaridade = $escolaridade;
-        // $this->telefone = $telefone;
 } 
 $pessoa = new Pessoa();
 $pessoa->falar($boca, $voz);
